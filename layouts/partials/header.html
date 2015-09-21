@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     {{ .Hugo.Generator }}
     <title>
       {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     {{ if .RSSlink }}
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml"
           title="{{ .Site.Title }}" />

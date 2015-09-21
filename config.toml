@@ -101,9 +101,6 @@ pygmentsUseClasses =        true
     name = "General"
     weight = -200
 [[menu.docs]]
-    name = "Services"
-    weight = -100
-[[menu.docs]]
     name = "Other"
     weight = -10
 

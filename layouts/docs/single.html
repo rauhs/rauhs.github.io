@@ -1,0 +1,86 @@
+{{ partial "header" . }}
+{{ partial "topnav" . }}
+
+{{ if (isset .Params "boost") }}
+  {{ $.Scratch.Set "boost" .Params.boost }}
+{{ else }}
+  {{ $.Scratch.Set "boost" "3" }}
+{{ end }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-2 col-lg-2 hidden-print">
+      <div class="eecis-card-tight shadowed">
+        <ul class="nav nav-stacked nav-left">
+          {{ $currentNode := . }}
+          {{ if in .Params.tags "internal" }}
+            {{ $.Scratch.Add "tmp" .Site.Menus.internal }}
+          {{ else }}
+            {{ $.Scratch.Add "tmp" .Site.Menus.docs }}
+            <li class="hidden show-for-staff alert-danger"><a href="/docs/internal/">Internal</a></li>
+          {{ end }}
+          {{ $menu := $.Scratch.Get "tmp" }}
+          {{ range $menu }}
+            {{ if .HasChildren }}
+              <li class="nav-topic {{if $currentNode.HasMenuCurrent "docs" . }}active{{end}}">
+                {{ .Pre }}<span>{{ .Name }}</span>
+              </li>
+              {{ range .Children }}
+                <li {{if $currentNode.IsMenuCurrent "docs" . }}
+                  class="active"{{end}}><a href="{{.URL}}">{{ .Name }}</a>
+                </li>
+              {{ end }}
+            {{else}}
+            {{end}}
+          {{end}}
+        </ul>
+      </div>
+    </div>
+    <!-- This is our main content so we need no padding -->
+    <div class="col-sm-12 col-md-10 col-lg-10 nopadding">
+      {{ partial "bread.html" . }}
+    </div>
+    <div class="col-sm-12 col-md-10 col-lg-10 hide-on-search">
+      {{ if and (isset .Params "toc") (eq .Params.toc true) }}
+        {{ partial "toc.html" . }}
+      {{ end }}
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="panel-title">{{ .Title }}</div>
+        </div>
+        <!-- we want to boost the search results for documentation: -->
+        <div class="panel-body crawl-me" data-boost="{{.Scratch.Get "boost" }}">
+          {{ .Content }}
+        </div>
+        {{/*
+        {{ $.Scratch.Set "header" "no" }}
+        {{ $currUrl := .RelPermalink }}
+        {{ range (sort .Site.Pages) }}
+          {{ if not (eq .Path "docs/index.md") }}
+            {{ if (not (in $currUrl "docs/internal")) }}
+              {{ if (not (in .Path "docs/internal")) }}
+                {{ if in .RelPermalink $currUrl }}
+                  {{ if ne .RelPermalink $currUrl }}
+                    {{ if eq ($.Scratch.Get "header") "no" }}
+                      <div class="panel-body">
+                        <hr>
+                        <h2>List of subpages:</h2>
+                      {{ $.Scratch.Set "header" "printed" }}
+                    {{ end }}
+                    <li><a href={{ .RelPermalink }}>{{.Title}}</a>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if eq ($.Scratch.Get "header") "printed" }}
+          </div>
+        {{ end }}
+        */}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer" . }}

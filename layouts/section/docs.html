@@ -1,0 +1,80 @@
+{{ partial "header" . }}
+{{ partial "topnav" . }}
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
+      {{ partial "bread.html" . }}
+    </div>
+  </div>
+
+  <div class="row hide-on-search">
+    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">
+            Welcome to my news page
+          </div>
+        </div>
+        <div class="panel-body crawl-me">
+          <p>Here you can stay up to date with our lab staff.
+          <p>Here we will inform you about scheduled downtime, new services and more.
+          <p>Subscribe to this page with your RSS reader.
+          <p><strike>Or subscribe by email:</strike>
+          <div class="input-group">
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-envelope"></span>
+            </span>
+            <input type="text" class="form-control" disabled placeholder="E-Mail">
+            <span class="input-group-btn">
+              <button disabled type="submit" class="btn btn-success">Submit</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ range .Paginator.Pages }}
+  <div class="row hide-on-search">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+            &ndash; {{ .Date.Format "02 Jan 2006" }}
+          </div>
+        </div>
+        <div class="panel-body">
+            {{ if .Truncated }}
+              {{ .Summary }}
+            <br>
+            <p>
+              <a href="{{ .RelPermalink }}">Read More…</a>
+              </p>
+            {{ else }}
+              {{ .Content }}
+            {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ else }}
+    <p>No news. Weird. :(
+  {{ end }}
+
+  <div class="row nopadding hide-on-search">
+    <div class="text-center">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
+
+
+</div>
+
+
+{{ partial "footer" . }}
+

@@ -1,0 +1,22 @@
+
+<script data-no-instant src="{{ "js/jquery-2.1.4.min.js" | relURL }}"></script>
+<script data-no-instant src="{{ "js/lodash.min.js"       | relURL }}"></script>
+<script data-no-instant src="{{ "js/react-with-addons-0.13.3.min.js" | relURL }}"></script>
+<script data-no-instant src="{{ "js/instantclick.js"     | relURL }}"></script>
+<script data-no-instant src="{{ "js/highlight.pack.js"   | relURL }}"></script>
+<script data-no-instant src="{{ "js/rx.lite.min.js"      | relURL }}"></script>
+<script>
+window.onDocLoad = function(handler) {
+  InstantClick.on('change', handler);
+}
+</script>
+<script>
+window.onDocLoad(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<script data-no-instant>InstantClick.init(5);</script>
+</body>
+</html>

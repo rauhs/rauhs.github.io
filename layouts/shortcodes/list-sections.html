@@ -1,0 +1,22 @@
+{{ if (eq (.Get "header") "0") }}
+{{ else }}
+<hr>
+<h2>List of sections</h2>
+{{ end }}
+
+{{ $inc := (or (.Get "include") .Page.RelPermalink) }}
+{{ $exc := (or (.Get "exclude") "This string wont match anything so no filter.") }}
+
+<ul>
+{{ range sort .Page.Site.Pages }}
+  {{ if        (in .RelPermalink $inc)  }}
+    {{ if (not (in .RelPermalink $exc)) }}
+      {{ if (not (eq .RelPermalink $inc)) }}
+        {{ if in .Path "index.md" }}
+          <li><a href={{ .RelPermalink }}>{{.Title}}</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+</ul>

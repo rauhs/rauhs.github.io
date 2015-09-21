@@ -1,0 +1,23 @@
+{{ partial "header" . }}
+{{ partial "topnav" . }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
+      {{ partial "bread.html" . }}
+      {{ if and (isset .Params "toc") (eq .Params.toc true) }}
+        {{ partial "toc.html" . }}
+      {{ end }}
+      <div class="panel panel-info hide-on-search">
+        <div class="panel-heading">
+          <div class="panel-title">{{ .Title }}</div>
+        </div>
+        <div class="panel-body crawl-me">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer" . }}

@@ -1,0 +1,20 @@
+{{ if (eq (.Get "header") "0") }}
+{{ else }}
+<hr>
+<h2>List of subpages</h2>
+{{ end }}
+
+{{ $exc := (or (.Get "exclude") "this string won't match any url so nothing is excluded ;)") }}
+{{ $currUrl := .Page.RelPermalink }}
+
+<ul>
+{{ range (sort .Page.Site.Pages) }}
+    {{ if (not (in .Path $exc)) }}
+      {{ if in .RelPermalink $currUrl }}
+        {{ if ne .RelPermalink $currUrl }}
+          <li><a href={{ .RelPermalink }}>{{.Title}}</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+{{ end }}
+</ul>

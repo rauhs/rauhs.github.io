@@ -1,0 +1,14 @@
+*upstream/
+**.swp
+**.pyc
+node/
+bootstrap/*
+hugo/hugo
+public/
+public_html/
+static/jsx/.module-cache/
+!bootstrap/Gruntfile_udel.js
+!bootstrap/less/udel/bootstrap.less
+!bootstrap/less/udel/variables.less
+!bootstrap/less/udel/custom.less
+!bootstrap/less/udel

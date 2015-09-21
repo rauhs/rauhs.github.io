@@ -1,0 +1,14 @@
+{{/*
+http://discuss.gohugo.io/t/implementing-breadcrumb-navigation-in-hugo/1048/5
+*/}}
+
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+{{ $.Scratch.Add "path" .Site.BaseURL }}
+
+{{ range $index, $element := split $url "/" }}
+  {{ $.Scratch.Add "path" $element }}
+    {{ if ne $element "" }}
+    <a href='{{ $.Scratch.Get "path" }}'>{{ (upper .) }}</a>
+    {{ $.Scratch.Add "path" "/" }}
+  {{ end }}
+{{ end }}

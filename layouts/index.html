@@ -13,7 +13,7 @@
           Welcome to my website.
         </div>
         <div class="mdl-card__actions">
-          <a href="#" class="mdl-button">Contact me!</a>
+          <a href="{{ "/contact/" | relURL }}" class="mdl-button">Contact me</a>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
           {{/* Display the latest news articles title & link it */}}
           {{range first 3 (where .Data.Pages "Section" "blog") }}
             <a class="mdl-button mdl-js-button mdl-button--accent"
-               href="{{.RelPermalink }}">
+               href="{{ .RelPermalink }}">
               {{ .Title }} ({{ .Date.Format "02 Jan" }})
             </a><br>
           {{ else }}
@@ -32,7 +32,25 @@
           {{ end }}
         </div>
         <div class="mdl-card__actions">
-          <a href="#" class="mdl-button">All posts</a>
+          <a href="{{ "/blog/" | relURL }}" class="mdl-button">All Posts</a>
+        </div>
+      </div>
+    </div>
+    <div class="mdl-grid mdl-cell mdl-cell--6-col mdl-grid--no-spacing mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text">
+          <h4>Projects</h4>
+          {{range first 3 (where .Data.Pages "Section" "projects") }}
+            <a class="mdl-button mdl-js-button mdl-button--accent"
+               href="{{ .RelPermalink }}">
+              {{ .Title }}
+            </a><br>
+          {{ else }}
+            No projects :(
+          {{ end }}
+        </div>
+        <div class="mdl-card__actions">
+          <a href="{{ "/projects/" | relURL }}" class="mdl-button">All Projects</a>
         </div>
       </div>
     </div>

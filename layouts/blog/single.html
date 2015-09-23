@@ -3,23 +3,15 @@
 {{ partial "header" . }}
 {{ partial "topnav" . }}
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
-      {{ partial "bread.html" . }}
-      <div class="panel panel-success hide-on-search">
-        <div class="panel-heading">
-          <div class="panel-title">
-            <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-            &ndash; {{ .Date.Format "02 Jan 2006 - 15:04" }}
-          </div>
-        </div>
-        <div class="panel-body crawl-me" data-boost="0.8">
-          {{ .Content }}
-        </div>
-      </div>
-    </div>
-  </div>
+{{/*
+{{ partial "bread.html" . }}
+*/}}
+
+<a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+&ndash; {{ .Date.Format "02 Jan 2006 - 15:04" }}
+<div class="panel-body crawl-me" data-boost="0.8">
+  {{ .Content }}
 </div>
 
 {{ partial "footer" . }}
+

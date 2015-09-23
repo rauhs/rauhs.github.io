@@ -21,8 +21,15 @@
       <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
           <h4>Latest Posts</h4>
-          <a class="mdl-button mdl-js-button mdl-button--accent" href="#">foo</a><br>
-          <a class="mdl-button mdl-js-button mdl-button--accent" href="#">foo</a>
+          {{/* Display the latest news articles title & link it */}}
+          {{range first 3 (where .Data.Pages "Section" "blog") }}
+            <a class="mdl-button mdl-js-button mdl-button--accent"
+               href="{{.RelPermalink }}">
+              {{ .Title }} ({{ .Date.Format "02 Jan" }})
+            </a><br>
+          {{ else }}
+            No posts :(
+          {{ end }}
         </div>
         <div class="mdl-card__actions">
           <a href="#" class="mdl-button">All posts</a>

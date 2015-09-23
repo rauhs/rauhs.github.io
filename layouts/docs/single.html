@@ -54,32 +54,6 @@
         <div class="panel-body crawl-me" data-boost="{{.Scratch.Get "boost" }}">
           {{ .Content }}
         </div>
-        {{/*
-        {{ $.Scratch.Set "header" "no" }}
-        {{ $currUrl := .RelPermalink }}
-        {{ range (sort .Site.Pages) }}
-          {{ if not (eq .Path "docs/index.md") }}
-            {{ if (not (in $currUrl "docs/internal")) }}
-              {{ if (not (in .Path "docs/internal")) }}
-                {{ if in .RelPermalink $currUrl }}
-                  {{ if ne .RelPermalink $currUrl }}
-                    {{ if eq ($.Scratch.Get "header") "no" }}
-                      <div class="panel-body">
-                        <hr>
-                        <h2>List of subpages:</h2>
-                      {{ $.Scratch.Set "header" "printed" }}
-                    {{ end }}
-                    <li><a href={{ .RelPermalink }}>{{.Title}}</a>
-                  {{ end }}
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        {{ if eq ($.Scratch.Get "header") "printed" }}
-          </div>
-        {{ end }}
-        */}}
       </div>
     </div>
   </div>

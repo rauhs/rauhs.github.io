@@ -23,6 +23,13 @@
   <link rel="stylesheet" href="{{ "css/font-awesome.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/hl-js/github.css" | relURL }}">
   <style type="text/css">
+    {{/* Make a sticky footer for mdl. See issue 913 */}}
+    .mdl-layout__content {
+      display: -webkit-flex;
+      display: flex;
+               -webkit-flex-direction: column;
+	      flex-direction: column;
+    }
   </style>
 </head>
 {{/*********************************************************************************/}}

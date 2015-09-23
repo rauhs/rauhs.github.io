@@ -3,12 +3,6 @@
 {{ partial "header" . }}
 {{ partial "topnav" . }}
 
-<style type="text/css">
-.rauh-post-title {
-  text-decoration: none;
-}
-</style>
-
 {{/*
 {{ partial "bread.html" . }}
 */}}
@@ -23,7 +17,7 @@
       <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
           <h4>Welcome to my blog</h4>
-          <p>Subscribe to this page with your RSS reader.
+          Subscribe to this page with your RSS reader.
         </div>
       </div>
     </div>
@@ -33,7 +27,7 @@
         <div class="mdl-card mdl-cell mdl-cell--12-col">
           <div class="mdl-card__supporting-text">
             <h4>
-              <a href="{{ .RelPermalink }}" class="rauh-post-title">{{ .Title }}</a>
+              <a href="{{ .RelPermalink }}" style="text-decoration:none">{{ .Title }}</a>
               &ndash; {{ .Date.Format "02 Jan 2006" }}
             </h4>
             {{ if .Truncated }}

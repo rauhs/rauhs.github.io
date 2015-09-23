@@ -7,11 +7,16 @@
 {{ partial "bread.html" . }}
 */}}
 
-<a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-&ndash; {{ .Date.Format "02 Jan 2006 - 15:04" }}
-<div class="panel-body crawl-me" data-boost="0.8">
-  {{ .Content }}
-</div>
+<main class="mdl-layout__content mdl-color--grey-100">
+  <section class="mdl-grid section--center">
 
-{{ partial "footer" . }}
+
+    <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+    &ndash; {{ .Date.Format "02 Jan 2006 - 15:04" }}
+    <div class="crawl-me" data-boost="0.8">
+      {{ .Content }}
+    </div>
+
+  {{ partial "footer" . }}
+</main>
 

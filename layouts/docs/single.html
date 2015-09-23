@@ -6,57 +6,13 @@
 {{ if (isset .Params "boost") }}
   {{ $.Scratch.Set "boost" .Params.boost }}
 {{ else }}
-  {{ $.Scratch.Set "boost" "3" }}
+  {{ $.Scratch.Set "boost" "1" }}
 {{ end }}
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-2 col-lg-2 hidden-print">
-      <div class="eecis-card-tight shadowed">
-        <ul class="nav nav-stacked nav-left">
-          {{ $currentNode := . }}
-          {{ if in .Params.tags "internal" }}
-            {{ $.Scratch.Add "tmp" .Site.Menus.internal }}
-          {{ else }}
-            {{ $.Scratch.Add "tmp" .Site.Menus.docs }}
-            <li class="hidden show-for-staff alert-danger"><a href="/docs/internal/">Internal</a></li>
-          {{ end }}
-          {{ $menu := $.Scratch.Get "tmp" }}
-          {{ range $menu }}
-            {{ if .HasChildren }}
-              <li class="nav-topic {{if $currentNode.HasMenuCurrent "docs" . }}active{{end}}">
-                {{ .Pre }}<span>{{ .Name }}</span>
-              </li>
-              {{ range .Children }}
-                <li {{if $currentNode.IsMenuCurrent "docs" . }}
-                  class="active"{{end}}><a href="{{.URL}}">{{ .Name }}</a>
-                </li>
-              {{ end }}
-            {{else}}
-            {{end}}
-          {{end}}
-        </ul>
-      </div>
-    </div>
-    <!-- This is our main content so we need no padding -->
-    <div class="col-sm-12 col-md-10 col-lg-10 nopadding">
-      {{ partial "bread.html" . }}
-    </div>
-    <div class="col-sm-12 col-md-10 col-lg-10 hide-on-search">
-      {{ if and (isset .Params "toc") (eq .Params.toc true) }}
-        {{ partial "toc.html" . }}
-      {{ end }}
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <div class="panel-title">{{ .Title }}</div>
-        </div>
-        <!-- we want to boost the search results for documentation: -->
-        <div class="panel-body crawl-me" data-boost="{{.Scratch.Get "boost" }}">
-          {{ .Content }}
-        </div>
-      </div>
-    </div>
-  </div>
+{{ .Title }}
+
+<div class="panel-body crawl-me" data-boost="{{.Scratch.Get "boost" }}">
+  {{ .Content }}
 </div>
 
 {{ partial "footer" . }}

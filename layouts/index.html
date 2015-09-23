@@ -4,21 +4,32 @@
 {{ partial "topnav" . }}
 
 <main class="mdl-layout__content mdl-color--grey-100">
-  {{/* <div class="page-content"> */}}
-  <div class="mdl-grid mdl-cell--12-col">
-    <section class="section--center mdl-cell--6-col mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <section class="mdl-grid section--center">
+    <div class="mdl-grid mdl-cell mdl-cell--6-col mdl-grid--no-spacing mdl-shadow--2dp">
       <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
           <h4>About me</h4>
           Hello, my name is Andr&#xe9; Rauh.<br>
-          I am
+          Welcome to my website.
         </div>
         <div class="mdl-card__actions">
           <a href="#" class="mdl-button">Contact me!</a>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+    <div class="mdl-grid mdl-cell mdl-cell--6-col mdl-grid--no-spacing mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text">
+          <h4>Latest Posts</h4>
+          <a class="mdl-button mdl-js-button mdl-button--accent" href="#">foo</a><br>
+          <a class="mdl-button mdl-js-button mdl-button--accent" href="#">foo</a>
+        </div>
+        <div class="mdl-card__actions">
+          <a href="#" class="mdl-button">All posts</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   {{ partial "footer" . }}
 </main>

@@ -40,13 +40,11 @@
       <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
           <h4>Projects</h4>
-          {{range first 3 (where .Data.Pages "Section" "projects") }}
+          {{range first 10 (where .Data.Pages "Section" "projects") }}
             <a class="mdl-button mdl-js-button mdl-button--accent"
-               href="{{ .RelPermalink }}">
+               href="{{ .Params.github }}">
               {{ .Title }}
             </a><br>
-          {{ else }}
-            No projects :(
           {{ end }}
         </div>
         <div class="mdl-card__actions">

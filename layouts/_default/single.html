@@ -3,23 +3,33 @@
 {{ partial "header" . }}
 {{ partial "topnav" . }}
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
-      {{ partial "bread.html" . }}
-      {{ if and (isset .Params "toc") (eq .Params.toc true) }}
-        {{ partial "toc.html" . }}
-      {{ end }}
-      <div class="panel panel-info hide-on-search">
-        <div class="panel-heading">
-          <div class="panel-title">{{ .Title }}</div>
-        </div>
-        <div class="panel-body crawl-me">
-          {{ .Content }}
+{{/*
+{{ partial "bread.html" . }}
+*/}}
+
+<style type="text/css">
+  .markdown-compiled p {
+    font-size: 14pt;
+  }
+  .markdown-compiled h1 {
+    font-size: 24pt;
+  }
+</style>
+
+<main class="mdl-layout__content">
+  <section class="mdl-grid section--center" style="width: 100%">
+    <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-grid--no-spacing mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text">
+          <h2>{{ .Title }} <small></small></h2>
+          <div class="crawl-me markdown-compiled" data-boost="0.8">
+            {{ .Content }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-{{ partial "footer" . }}
+  {{ partial "footer" . }}
+</main>
+

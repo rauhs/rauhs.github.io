@@ -7,15 +7,22 @@
 {{ partial "bread.html" . }}
 */}}
 
-<main class="mdl-layout__content mdl-color--grey-100">
-  <section class="mdl-grid section--center">
-
-
-    <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-    &ndash; {{ .Date.Format "02 Jan 2006 - 15:04" }}
-    <div class="crawl-me" data-boost="0.8">
-      {{ .Content }}
+<main class="mdl-layout__content">
+  <section class="mdl-grid section--center" style="width: 100%">
+    <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-grid--no-spacing mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text">
+          <h4>{{ .Title }}</h4>
+          {{ .Date.Format "02 Jan 2006" }}
+          {{/* .Date.Format "02 Jan 2006 - 15:04" */}}
+          <div class="crawl-me" data-boost="0.8">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
 
   {{ partial "footer" . }}
 </main>

@@ -9,10 +9,21 @@
   {{ $.Scratch.Set "boost" "1" }}
 {{ end }}
 
-{{ .Title }}
+<main class="mdl-layout__content mdl-color--grey-100">
+  <section class="mdl-grid section--center">
+    <div class="mdl-grid mdl-cell mdl-cell--6-col mdl-grid--no-spacing mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text">
+          <h4> {{ .Title }} </h4>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="panel-body crawl-me" data-boost="{{.Scratch.Get "boost" }}">
-  {{ .Content }}
-</div>
+  <div class="panel-body crawl-me" data-boost="{{.Scratch.Get "boost" }}">
+    {{ .Content }}
+  </div>
 
-{{ partial "footer" . }}
+  {{ partial "footer" . }}
+</main>
+

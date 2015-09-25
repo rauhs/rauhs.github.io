@@ -1,6 +1,6 @@
 +++
 title = "A TCP load balancer in GO"
-github = "https://github.com/rauhs/go-tcp-balance"
+github = "http://github.com/rauhs/go-tcp-balance"
 +++
 
 # Link

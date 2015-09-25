@@ -1,7 +1,7 @@
 +++
 title = "Klang - Clojurescript logging library"
-#github = "https://github.com/rauhs/klang"
-github = "https://arauh.net/projects/klang"
+#github = "http://github.com/rauhs/klang"
+github = "http://arauh.net/projects/klang"
 +++
 
 # Demo

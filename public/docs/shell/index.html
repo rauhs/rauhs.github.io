@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    
+    
+    
+    <meta name="generator" content="Hugo 0.14" />
+
+    <title>
+       Unix Shells &middot;  ECE/CIS
+    </title>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    <link rel="canonical" href="http://localhost:36257/docs/shell/">
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/hl-js/github.css">
+    
+    <script>
+      window.HugoSections = [
+        "classes", 
+        "docs", 
+        "news", 
+        "research", ];
+    </script>
+    
+    <style type="text/css">
+     .eecis-card-tight {
+         
+         margin-left: -15px;
+         margin-bottom: 12px;
+         padding: 7px;
+         border: 1px solid lightgrey;
+         background-color: white;
+     }
+     .nopadding {
+         padding: 0 !important;
+         margin: 0 !important;
+     }
+     .card-pad {
+         margin: 15px;
+         padding: 10px !important;
+     }
+     .eecis-card {
+         padding: 8px;
+         margin: 0px;
+         border: 1px solid lightgrey;
+         background-color: white;
+     }
+     .shadowed {
+         box-shadow: 3px 3px 5px #888888;
+     }
+     .nav-container a {
+         font-size: large;
+     }
+      
+     .hlt1, .hlt2, .hlt3, .hlt4, .hlt5, .hlt5, .hlt6, .hlt7, .hlt8, .hlt9 {
+         color: #af1e2d;
+     }
+     .nav-container {
+         margin-left: -15px;
+         margin-right: -15px;
+     }
+     a:hover .glyphicon:before, a:hover .fa:before {
+         opacity: 1.0;
+            
+     }
+     .glyphicon:before, .fa:before {
+         opacity: 0.5;
+         color: #00539f;
+     }
+     .glyph-black:before {
+         color: black;
+     }
+      
+     .eecis-card-tight > .nav-left > li > a {
+       padding: 3px 8px;
+     }
+      
+    .has-feedback-left input.form-control {
+        padding-left: 34px;  
+        padding-right: 12px;  
+    }
+    .has-feedback-left .form-control-feedback {
+        left: 0; 
+    }
+    .form-horizontal .has-feedback-left .form-control-feedback {
+        left: 12px;  
+    }
+    .has-feedback-left input.input-sm {
+      padding-left: 30px;  @input-height-small;
+    }
+    .has-feedback-left input.input-lg {
+      padding-left: 46px;  @input-height-large;
+    }
+    
+    .nav-left li:not(.nav-topic).active {
+      border-left: 3px solid #00539f;
+      margin-left: -3px;
+    }
+    </style>
+  </head>
+  <body>
+
+
+
+<div class="container hidden-print">
+  <div class="nav-container">
+    <nav>
+      <ul class="nav nav-justified">
+        <li>
+          <a href="/">
+            <i class="glyphicon glyphicon-home"></i>
+            Home</a>
+        </li>
+        <li>
+          <a href="/news/">
+            <i class="glyphicon glyphicon-flash"></i>
+            News</a>
+        </li>
+        <li>
+          <a href="/research/">
+            <i class="fa fa-user-md"></i>
+            Research</a>
+        </li>
+        <li>
+          <a data-no-instant href="mailto:xy@gmail.com">
+            <i class="fa fa-comments-o"></i>
+            Contact</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" id="user-dropdown" class="dropdown-toggle" data-toggle="dropdown" role="button">
+            <i class="glyphicon glyphicon-education"></i>
+            Classes<span class="caret"></span>
+          </a>
+          <div id="user-dropdown-content" class="dropdown-menu pull-right" style="padding:19px;width:340px">
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="container hidden-print" style="height: 20px"></div>
+
+
+
+
+  
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-2 col-lg-2 hidden-print">
+      <div class="eecis-card-tight shadowed">
+        <ul class="nav nav-stacked nav-left">
+          
+          
+            
+            <li class="hidden show-for-staff alert-danger"><a href="/docs/internal/">Internal</a></li>
+          
+          
+          
+            
+            
+          
+            
+            
+          
+            
+              <li class="nav-topic ">
+                <span>Other</span>
+              </li>
+              
+                <li ><a href="/docs/history/">History</a>
+                </li>
+              
+            
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="col-sm-12 col-md-10 col-lg-10 nopadding">
+      
+<div class="row nopadding hidden-print">
+  <div class="col-md-9 col-sm-8 col-xs-6" id="breadcrumb">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+    </ol>
+  </div>
+  <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
+    
+  </div>
+  <div class="col-md-3 hidden show-for-staff">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" id="search-filter">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row hidden show-on-search">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    </div>
+    <div class="col-sm-12 col-md-10 col-lg-10 hide-on-search">
+      
+          <div class="row hidden-print">
+    <div class="col-sm-12 col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Table of Contents</h3>
+        </div>
+        <div class="panel-body">
+          <nav id="TableOfContents">
+<ul>
+<li><a href="#changing-your-shell">Changing your shell</a></li>
+<li><a href="#tcsh-cshrc-login-and-environment-variables">tcsh, .cshrc/.login and environment variables</a></li>
+<li><a href="#man-pages">Man pages</a></li>
+<li><a href="#using-ps-and-killing-processes">Using ps and killing processes</a></li>
+</ul>
+</nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="panel-title">Unix Shells</div>
+        </div>
+        
+        <div class="panel-body crawl-me" data-boost="3">
+          
+
+<h1 id="changing-your-shell">Changing your shell</h1>
+
+<p>As of July 2014, changing your login shell on the command line via <code>chsh</code> is
+disabled. Instead, create a help ticket. We&rsquo;ll make the change for you.</p>
+
+<p>Note that <code>/bin/tcsh</code> is the ECE/CIS supported shell. If you choose another
+shell, such as <code>/usr/bin/ksh</code> or <code>/bin/bash</code> you are on your own if you run
+into problems.</p>
+
+<h1 id="tcsh-cshrc-login-and-environment-variables">tcsh, .cshrc/.login and environment variables</h1>
+
+<p>The supported login shell is tcsh, although users may also select others if
+they so desire. Tcsh is much more powerful than csh and should be used.
+~/.cshrc is the startup file that csh/tcsh read. tcsh will read ~/.tcshrc
+instead if it exists. ~/.login is read on login. These are the files that set
+up a user&rsquo;s environment. Prototypes of these files, the ones new users receive,
+are in <code>/usr/local/lib/startup</code>.</p>
+
+<p>There are two sets of variables that csh and tcsh use. Environment variables
+are passed down to child processes and are set with <code>setenv</code> and can be viewed
+with <code>printenv</code>. Shell variable are only used by the shell and are set with
+<code>set</code>, and can be viewed with <code>echo $var</code>. <code>setenv</code> does not use an &lsquo;=&rsquo; to
+assign variables, but <code>set</code> does. An example follows:</p>
+
+<p>After changing something in your .cshrc you need to either source it by typing
+&laquo;<code>source .cshrc</code>&raquo; in each window you want the change to take effect or by
+logging out and back in.</p>
+
+<ul>
+<li>A very important Environment variable is <code>PATH</code>.</li>
+<li>A very important Shell variable is <code>path</code>.</li>
+<li><code>PATH</code> is a colon separated list of directories.</li>
+<li><code>path</code> is a space separated list of directories.</li>
+</ul>
+
+<p>These two variable do the same thing, sets the search path to find executable
+programs. You don&rsquo;t have to worry about maintaining both, of them, just one
+will do, as csh/tcsh will automatically set the other when you change one of
+them. For example:</p>
+
+<pre><code>&gt; echo $path
+/usr/local/bin /bin
+&gt; printenv PATH
+/usr/local/bin:/bin
+
+&gt; set path = ( /usr/local/bin /bin /usr/sbin )
+&gt; echo $path  \\ /usr/local/bin /bin /usr/sbin
+&gt; printenv PATH 
+/usr/local/bin:/bin:/usr/sbin
+
+&gt; setenv PATH ${PATH}:/usr/local/etc 
+&gt; echo $path
+/usr/local/bin /bin /usr/sbin /usr/local/etc 
+&gt; printenv PATH 
+/usr/local/bin:/bin:/usr/sbin:/usr/local/etc
+
+&gt; set path = ( ${path} . ) 
+&gt; echo $path 
+/usr/local/bin /bin /usr/sbin /usr/local/etc . 
+&gt; printenv PATH 
+/usr/local/bin:/bin:/usr/sbin:/usr/local/etc:.
+</code></pre>
+
+<p>As the preceding shows $var or ${var} will give the value of var. The last
+example show include &lsquo;.&rsquo; in the path. That is the current directory. If you
+include &lsquo;.&rsquo; in your path it should be last, after all system directories, and
+not first as bad things can happen with it first.</p>
+
+<h1 id="man-pages">Man pages</h1>
+
+<p>Man is short for manual and is how things are documented in Unix. Run <code>man man</code>
+to read the manual system&rsquo;s manual page.</p>
+
+<p>MANPATH is an environment variable used by man to find man pages. It is a colon
+separated list of directories for man to look in for man pages. Alternatively
+you man specify the directory to look in with the -M option to man. The
+directory the man page is in must either be in MANPATH or in one specified by
+the -M option for man to find it. The directories actually have subdirectories
+for the different sections of the manual, which contain the files. For example,
+  <code>ls -l /usr/man/.</code>.</p>
+
+<p>The manual has several sections. Sometimes you need to know what section the
+man page is in. For example, if you want the man page for the <code>write()</code> system
+call, you need to do <code>man -s 2 write</code> as man would first find the write command
+in section one which are user commands. On Linux the -s can be left off.
+Another useful option to man is -k to search for a keyword. For example, <code>man
+-k write</code>.</p>
+
+<p>Man pages are often in nroff format. What man basically does is find the man
+page, then do an <code>nroff -man filename| $PAGER</code>. So if you change this to <code>nroff
+-man filename | lpr</code>, it will be sent to the printer. This requires finding the
+location of the man page however. On most systems with <code>enscript</code>, you can
+simply use <code>man filename | enscript -PPrinterName</code>.</p>
+
+<p>Note: If you have missing man pages on some systems such as mlb, you may need
+to add /usr/share/man to your manpath.</p>
+
+<h1 id="using-ps-and-killing-processes">Using ps and killing processes</h1>
+
+<p>The command to get a listing of processes is <code>ps</code>. This command comes in two
+flavors, BSD and SYSV. If you are on a Solaris host, uname -sr is SunOS 5.x,
+then do a <code>which ps</code> to find out which ps you are using by default.
+<code>/usr/bin/ps</code> is SYSV and is faster, while <code>/usr/ucb/ps</code> is BSD.</p>
+
+<p>Now that you know which flavor ps you are using you now can give it the right
+options to get what you want. With the SYSV version you probably will want to
+use <code>ps -elf</code>, which will list all processes on the host in long format. With
+the BSD version <code>ps -augxww</code> will do a similar job. Piping the output to grep
+may be helpful, for example, <code>ps -elf | grep $USER</code>. The SYV version also has a
+-u option which takes a username to limit the output to processes running for
+that user. Check the man page, <code>man ps</code>, for more info. Solaris users may find
+the <code>-o</code> option to <code>/usr/bin/ps</code> helpful.</p>
+
+<p>To kill a process first try <code>kill PID</code>, where PID is the PID of the process to
+kill. See the previous answer on ps which will give you the PID. If that
+doesn&rsquo;t kill the process try <code>kill -9 PID</code> instead.</p>
+
+<p>Also, there are <code>pgrep</code> and <code>pkill</code> commands. <code>pgrep</code> will return the PID(s) of
+a process that matches the expression. <code>pkill</code> will send a signal to
+process(es) that match an expression. See their man page for more info.</p>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="eecis-footer-container hidden-print">
+  <div class="container footer-styles">
+    <div class="row">
+      <div class="col-xs-5">
+        
+        <h4>EXTERNAL</h4>
+        <ul class="list-unstyled">
+          <li><a data-no-instant
+                 href="http://www.ece.udel.edu/people/faculty.php">ECE Faculty</a></li>
+          <li><a data-no-instant
+                 href="https://www.cis.udel.edu/people/index.html">CIS Faculty</a></li>
+          <li><a data-no-instant
+                 href="http://www.ece.udel.edu/">Electrical &amp; Computer Engineering</a></li>
+          <li><a data-no-instant
+                 href="https://www.cis.udel.edu/">Computer &amp; Information Sciences</a></li>
+          <li><a data-no-instant
+                 href="https://www.eecis.udel.edu/">ECE/CIS</a></li>
+          <li><a data-no-instant
+                 href="http://www.udel.edu/">University of Delaware</a></li>
+        </ul>
+      </div>
+      
+      <div class="clearfix"></div>
+      <p class="copyright">ECE/CIS &bull; University of Delaware &mdash;
+        All Rights Reserved &bull; Newark, DE 19716 &bull;
+        USA &bull; 2015 &bull; <small>Design by André Rauh</small></p>
+      <p class="copyright">
+        <a data-no-instant href=https://www.eecis.udel.edu/service/>Comments</a> &bull;
+        <a data-no-instant href=https://www.eecis.udel.edu/service/>Contact Us</a> &bull;
+        <a data-no-instant href="http://www.udel.edu/aboutus/legalnotices.html">
+          Legal Notices</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script data-no-instant src="/js/jquery-2.1.4.js"></script>
+<script data-no-instant src="/js/bootstrap.js"></script>
+<script data-no-instant src="/js/lodash.js" data-no-instant></script>
+<script data-no-instant src="/js/react-with-addons-0.13.3.js"></script>
+<script data-no-instant src="/js/instantclick.js"></script>
+<script data-no-instant src="/js/highlight.pack.js"></script>
+<script data-no-instant src="/js/rx.lite.js"></script>
+<script>
+window.onDocLoad = function(handler) {
+  InstantClick.on('change', handler);
+}
+</script>
+<script data-no-instant src="/jsx/breadcrumb.js"></script>
+<script>
+window.onDocLoad(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<script data-no-instant>InstantClick.init(5);</script>
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':36257/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+

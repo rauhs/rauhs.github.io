@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>André Rauh</title>
+    <link>http://localhost:1314/</link>
+    <description>Recent content on André Rauh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2015 13:54:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1314/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>New Website</title>
+      <link>http://localhost:1314/blog/2015-09-new-website/</link>
+      <pubDate>Thu, 24 Sep 2015 13:54:00 -0400</pubDate>
+      
+      <guid>http://localhost:1314/blog/2015-09-new-website/</guid>
+      <description>
+
+&lt;p&gt;As you can see, I have just published a  new website.&lt;/p&gt;
+
+&lt;p&gt;It is simple to maintain &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;markdown&lt;/a&gt; stuff.&lt;/p&gt;
+
+&lt;h1 id=&#34;details&#34;&gt;Details&lt;/h1&gt;
+
+&lt;p&gt;For simplicity and security reasons I decided to use a static website generator
+for the entire website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1314/contact/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/contact/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1314/docs/more/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/docs/more/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A TCP load balancer in GO</title>
+      <link>http://localhost:1314/projects/go-tcp-balance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/projects/go-tcp-balance/</guid>
+      <description>
+
+&lt;h1 id=&#34;link&#34;&gt;Link&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rauhs/go-tcp-balance&#34;&gt;https://github.com/rauhs/go-tcp-balance&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A fast weighted median algorithm</title>
+      <link>http://localhost:1314/projects/fast-weighted-median/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/projects/fast-weighted-median/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rauhs/fast-weighted-median&#34;&gt;https://github.com/rauhs/fast-weighted-median&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact me</title>
+      <link>http://localhost:1314/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/contact/</guid>
+      <description>&lt;p&gt;Twitter:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/andrerauh&#34;&gt;https://twitter.com/andrerauh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Email:&lt;/p&gt;
+
+&lt;p&gt;firstname dot lastname at gmail&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Documentation Overview</title>
+      <link>http://localhost:1314/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/docs/</guid>
+      <description>
+
+&lt;h1 id=&#34;welcome-to-our-documentation&#34;&gt;Welcome to our Documentation&lt;/h1&gt;
+
+&lt;p&gt;For questions not answered in this documentation, please &lt;a href=&#34;https://www.eecis.udel.edu/service/&#34;&gt;contact us&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;header&#34;&gt;Header&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:1314/docs/more/&#34;&gt;more&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;hr&gt;
+&lt;h2&gt;List of sections&lt;/h2&gt;
+
+
+
+
+
+&lt;ul&gt;
+
+  
+
+  
+
+  
+    
+      
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+        
+          &lt;li&gt;&lt;a href=/docs/&gt;Documentation Overview&lt;/a&gt;
+        
+      
+    
+  
+
+  
+
+  
+
+&lt;/ul&gt;
+
+
+
+&lt;hr&gt;
+&lt;h2&gt;List of subpages&lt;/h2&gt;
+
+
+
+
+
+&lt;ul&gt;
+
+    
+      
+    
+
+    
+      
+    
+
+    
+      
+        
+          &lt;li&gt;&lt;a href=/docs/more/&gt;&lt;/a&gt;
+        
+      
+    
+
+    
+      
+    
+
+    
+      
+    
+
+    
+      
+    
+
+    
+      
+        
+      
+    
+
+    
+      
+    
+
+    
+      
+    
+
+&lt;/ul&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Klang - Clojurescript logging library</title>
+      <link>http://localhost:1314/projects/klang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/projects/klang/</guid>
+      <description>
+
+&lt;h1 id=&#34;link&#34;&gt;Link&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rauhs/klang&#34;&gt;https://github.com/rauhs/klang&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turn a matrix determinant odd</title>
+      <link>http://localhost:1314/projects/odd-det-algorithm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/projects/odd-det-algorithm/</guid>
+      <description>&lt;p&gt;TODO&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

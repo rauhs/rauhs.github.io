@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on André Rauh</title>
+    <link>http://localhost:1314/news/</link>
+    <description>Recent content in News on André Rauh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Sep 2015 13:54:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1314/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>New Website</title>
+      <link>http://localhost:1314/news/2015-09-new-website/</link>
+      <pubDate>Fri, 11 Sep 2015 13:54:00 -0400</pubDate>
+      
+      <guid>http://localhost:1314/news/2015-09-new-website/</guid>
+      <description>
+
+&lt;p&gt;As you can see, I have just published a (long overdue) new website.&lt;/p&gt;
+
+&lt;p&gt;It is simple to maintain &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;markdown&lt;/a&gt; stuff.&lt;/p&gt;
+
+&lt;h1 id=&#34;details&#34;&gt;Details&lt;/h1&gt;
+
+&lt;p&gt;For simplicity and security reasons I decided to use a static website generator
+for the entire website.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Let us know how you like the new page and don&amp;rsquo;t hesitate to &lt;a href=&#34;mailto:xy@gmail.com&#34;&gt;contact me&lt;/a&gt; for
+any questions or feedback.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Yours X Y&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,8 +4,7 @@
 node/
 bootstrap/*
 hugo/hugo
-public/
-public_html/
+
 static/jsx/.module-cache/
 !bootstrap/Gruntfile_udel.js
 !bootstrap/less/udel/bootstrap.less

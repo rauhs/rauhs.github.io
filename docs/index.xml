@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on André Rauh</title>
+    <link>http://localhost:57877/docs/</link>
+    <description>Recent content in Docs on André Rauh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:57877/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>http://localhost:57877/docs/more/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:57877/docs/more/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Documentation Overview</title>
+      <link>http://localhost:57877/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:57877/docs/</guid>
+      <description>
+
+&lt;h1 id=&#34;welcome-to-our-documentation&#34;&gt;Welcome to our Documentation&lt;/h1&gt;
+
+&lt;p&gt;For questions not answered in this documentation, please &lt;a href=&#34;https://www.eecis.udel.edu/service/&#34;&gt;contact us&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;header&#34;&gt;Header&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:57877/docs/more/&#34;&gt;more&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;hr&gt;
+&lt;h2&gt;List of sections&lt;/h2&gt;
+
+
+
+
+
+&lt;ul&gt;
+
+  
+
+  
+
+  
+    
+      
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+        
+          &lt;li&gt;&lt;a href=/docs/&gt;Documentation Overview&lt;/a&gt;
+        
+      
+    
+  
+
+  
+
+  
+
+&lt;/ul&gt;
+
+
+
+&lt;hr&gt;
+&lt;h2&gt;List of subpages&lt;/h2&gt;
+
+
+
+
+
+&lt;ul&gt;
+
+    
+      
+    
+
+    
+      
+    
+
+    
+      
+        
+          &lt;li&gt;&lt;a href=/docs/more/&gt;&lt;/a&gt;
+        
+      
+    
+
+    
+      
+    
+
+    
+      
+    
+
+    
+      
+    
+
+    
+      
+        
+      
+    
+
+    
+      
+    
+
+    
+      
+    
+
+&lt;/ul&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

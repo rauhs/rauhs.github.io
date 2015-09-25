@@ -1,0 +1,9 @@
+User-agent: *
+#Allow: /docs/
+Allow: /news/
+Allow: /
+Disallow: *.png
+Disallow: *.jpg
+Disallow: *.css
+Disallow: *.js
+

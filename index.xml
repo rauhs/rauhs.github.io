@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>André Rauh</title>
-    <link>http://localhost:57877/</link>
+    <link>http://localhost:1314/</link>
     <description>Recent content on André Rauh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Sep 2015 13:54:00 -0400</lastBuildDate>
-    <atom:link href="http://localhost:57877/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1314/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>New Website</title>
-      <link>http://localhost:57877/blog/2015-09-new-website/</link>
+      <link>http://localhost:1314/blog/2015-09-new-website/</link>
       <pubDate>Thu, 24 Sep 2015 13:54:00 -0400</pubDate>
       
-      <guid>http://localhost:57877/blog/2015-09-new-website/</guid>
+      <guid>http://localhost:1314/blog/2015-09-new-website/</guid>
       <description>
 
 &lt;p&gt;As you can see, I have just published a  new website.&lt;/p&gt;
@@ -30,28 +30,28 @@ for the entire website.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://localhost:57877/contact/test/</link>
+      <link>http://localhost:1314/contact/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/contact/test/</guid>
+      <guid>http://localhost:1314/contact/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:57877/docs/more/</link>
+      <link>http://localhost:1314/docs/more/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/docs/more/</guid>
+      <guid>http://localhost:1314/docs/more/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A TCP load balancer in GO</title>
-      <link>http://localhost:57877/projects/go-tcp-balance/</link>
+      <link>http://localhost:1314/projects/go-tcp-balance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/projects/go-tcp-balance/</guid>
+      <guid>http://localhost:1314/projects/go-tcp-balance/</guid>
       <description>
 
 &lt;h1 id=&#34;link&#34;&gt;Link&lt;/h1&gt;
@@ -62,20 +62,20 @@ for the entire website.&lt;/p&gt;
     
     <item>
       <title>A fast weighted median algorithm</title>
-      <link>http://localhost:57877/projects/fast-weighted-median/</link>
+      <link>http://localhost:1314/projects/fast-weighted-median/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/projects/fast-weighted-median/</guid>
+      <guid>http://localhost:1314/projects/fast-weighted-median/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rauhs/fast-weighted-median&#34;&gt;https://github.com/rauhs/fast-weighted-median&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Contact me</title>
-      <link>http://localhost:57877/contact/</link>
+      <link>http://localhost:1314/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/contact/</guid>
+      <guid>http://localhost:1314/contact/</guid>
       <description>&lt;p&gt;Twitter:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/andrerauh&#34;&gt;https://twitter.com/andrerauh&lt;/a&gt;&lt;/p&gt;
@@ -88,10 +88,10 @@ for the entire website.&lt;/p&gt;
     
     <item>
       <title>Documentation Overview</title>
-      <link>http://localhost:57877/docs/</link>
+      <link>http://localhost:1314/docs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/docs/</guid>
+      <guid>http://localhost:1314/docs/</guid>
       <description>
 
 &lt;h1 id=&#34;welcome-to-our-documentation&#34;&gt;Welcome to our Documentation&lt;/h1&gt;
@@ -100,7 +100,7 @@ for the entire website.&lt;/p&gt;
 
 &lt;h1 id=&#34;header&#34;&gt;Header&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://localhost:57877/docs/more/&#34;&gt;more&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1314/docs/more/&#34;&gt;more&lt;/a&gt; page.&lt;/p&gt;
 
 &lt;p&gt;
 
@@ -207,11 +207,15 @@ for the entire website.&lt;/p&gt;
     
     <item>
       <title>Klang - Clojurescript logging library</title>
-      <link>http://localhost:57877/projects/klang/</link>
+      <link>http://localhost:1314/projects/klang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/projects/klang/</guid>
+      <guid>http://localhost:1314/projects/klang/</guid>
       <description>
+
+&lt;h1 id=&#34;demo&#34;&gt;Demo&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.arauh.net/projects/klang/demo.html&#34;&gt;http://www.arauh.net/projects/klang/demo.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;link&#34;&gt;Link&lt;/h1&gt;
 
@@ -221,10 +225,10 @@ for the entire website.&lt;/p&gt;
     
     <item>
       <title>Turn a matrix determinant odd</title>
-      <link>http://localhost:57877/projects/odd-det-algorithm/</link>
+      <link>http://localhost:1314/projects/odd-det-algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:57877/projects/odd-det-algorithm/</guid>
+      <guid>http://localhost:1314/projects/odd-det-algorithm/</guid>
       <description>&lt;p&gt;TODO&lt;/p&gt;
 </description>
     </item>

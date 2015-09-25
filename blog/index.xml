@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on André Rauh</title>
-    <link>http://localhost:57877/blog/</link>
+    <link>http://localhost:1314/blog/</link>
     <description>Recent content in Blogs on André Rauh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Sep 2015 13:54:00 -0400</lastBuildDate>
-    <atom:link href="http://localhost:57877/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1314/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>New Website</title>
-      <link>http://localhost:57877/blog/2015-09-new-website/</link>
+      <link>http://localhost:1314/blog/2015-09-new-website/</link>
       <pubDate>Thu, 24 Sep 2015 13:54:00 -0400</pubDate>
       
-      <guid>http://localhost:57877/blog/2015-09-new-website/</guid>
+      <guid>http://localhost:1314/blog/2015-09-new-website/</guid>
       <description>
 
 &lt;p&gt;As you can see, I have just published a  new website.&lt;/p&gt;
